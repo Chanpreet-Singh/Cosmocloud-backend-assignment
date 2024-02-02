@@ -2,6 +2,7 @@ import constants
 
 from fastapi import FastAPI, Query
 
+from models import Order
 from api_helper import ApiHelper
 from mongo_utils import MongoUtils
 
@@ -15,7 +16,13 @@ async def get_products(
         min_price: float = Query(None, ge=0, description="Minimum price filter"),
         max_price: float = Query(None, ge=0, description="Maximum price filter")
 ):
-    # global mongo_obj
     api_helper_obj = ApiHelper(mongo_obj)
     result = api_helper_obj.get_all_products(constants.product_collection, limit, offset, min_price, max_price)
     return result
+
+@app.post("/make_order")
+async def create_order(order_data: Order):
+    api_helper_obj = ApiHelper(mongo_obj)
+    order_id = api_helper_obj.create_order(constants.order_collection, order_data.dict())
+    result_dict = {"message": "Order created successfully", "order_id": order_id}
+    return result_dict

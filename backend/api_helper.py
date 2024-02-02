@@ -1,4 +1,9 @@
+import datetime
 import traceback
+
+from bson import ObjectId
+
+import constants
 
 class ApiHelper:
     def __init__(self, mongo_util_obj):
@@ -33,3 +38,18 @@ class ApiHelper:
         except Exception as e:
             print("Error : {0}\nException : {1}".format(e, traceback.format_exc()))
         return result
+
+    def create_order(self, collection_name, order_data):
+        order_data["createdOn"] = datetime.datetime.now()
+        order_id = self.mongo_util_obj.insert_one_document(collection_name, order_data, confirm=True)
+        if order_id:
+            reduced_order_qty = []
+            for each_item in order_data["items"]:
+                query_dict = {"query": [
+                                            {"_id": ObjectId(each_item["productId"])},
+                                            {"$inc": {"avail_qty": -each_item["boughtQuantity"]}}
+                                        ]
+                            }
+                reduced_order_qty.append(query_dict)
+            self.mongo_util_obj.bulk_updates(constants.product_collection, reduced_order_qty)
+        return order_id
