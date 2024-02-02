@@ -1,0 +1,76 @@
+[{
+    "name": "TV",
+    "price": 30000,
+    "avail_qty": 10
+  },
+  {
+    "name": "Laptop",
+    "price": 50000,
+    "avail_qty": 5
+  },
+  {
+    "name": "Mirror",
+    "price": 1000,
+    "avail_qty": 100
+  },
+  {
+    "name": "AC",
+    "price": 30000,
+    "avail_qty": 30
+  },
+  {
+    "name": "Remote",
+    "price": 250,
+    "avail_qty": 150
+  },
+  {
+    "name": "Air purifier",
+    "price": 12000,
+    "avail_qty": 200
+  },
+  {
+    "name": "Table",
+    "price": 5000,
+    "avail_qty": 40
+  },
+  {
+    "name": "Chair",
+    "price": 600,
+    "avail_qty": 55
+  },
+  {
+    "name": "Fan",
+    "price": 30000,
+    "avail_qty": 10
+  },
+  {
+    "name": "Cooler",
+    "price": 50000,
+    "avail_qty": 5
+  },
+  {
+    "name": "Microwave",
+    "price": 1000,
+    "avail_qty": 100
+  },
+  {
+    "name": "Oven",
+    "price": 30000,
+    "avail_qty": 30
+  },
+  {
+    "name": "Toy",
+    "price": 250,
+    "avail_qty": 150
+  },
+  {
+    "name": "Stove",
+    "price": 12000,
+    "avail_qty": 200
+  },
+  {
+    "name": "Chimney",
+    "price": 5000,
+    "avail_qty": 40
+  }
+]
