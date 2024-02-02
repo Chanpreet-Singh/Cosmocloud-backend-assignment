@@ -12,3 +12,7 @@ Make sure to create a python3.11  virtual environment as venv and install all th
 `python3.11 -m venv venv`<br>
 `source venv/bin/activate`<br>
 `cd Project\ Setup/; pip install -r requirements.txt`
+
+### Insertion of Dummy Data
+Go to the folder: `cd Project\ Setup/custom_data/`<br>
+Command: `mongoimport --db cosmocloud --collection product --file products.json  --jsonArray`
