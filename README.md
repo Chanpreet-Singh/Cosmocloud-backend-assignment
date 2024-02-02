@@ -9,3 +9,11 @@ This project contains code, as an assignment, completed as a part of the hiring 
 
 ### Setting up of the project
 Follow this [readme document](https://github.com/Chanpreet-Singh/Cosmocloud-backend-assignment/blob/main/Project%20Setup/Readme%20for%20setup.md) to set up the project.
+
+### Deployment
+The project was deployed in the local development machine. However, it can also be deployed in a cloud-based VM using NGINX or Apache Servers.
+
+### Execution
+- Activate the virtual environment: `source venv/bin/activate`
+- Go to the folder: `cd backend`<br>
+- Command to execute the API: `uvicorn api:app --reload`
