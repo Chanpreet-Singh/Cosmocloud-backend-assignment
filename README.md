@@ -22,5 +22,5 @@ The project was deployed in the local development machine. However, it can also 
 - ***api.py***: This is the main script that acts as the entry point to the API. Also, in here connection to the database is defined via mongo_utils.
 - ***api_helper.py***: This is the helper script to the main script i.e. all the API logic is written in here. It interacts with the database via mongo_utis.
 - ***mongo_utils.py***: In this script, the basic CRUD(only required in the project) operations using pymongo library are written.
-- ***constants.py**: This file contains the database credentials, ideally it should be in a secure vault/file. 
+- ***constants.py***: This file contains the database credentials, ideally it should be in a secure vault/file. 
 - ***models.py***: In this python file, the request's payload's model of the second API is kept so that Fast API Service automatically validates it.
